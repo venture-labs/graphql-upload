@@ -20,7 +20,7 @@ class GraphQLUploadMiddleware implements MiddlewareInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        if ($this->isGraphQLRequest($request) && strpos($request->getHeader('Content-Type')[0], 'multipart/form-data') === 0) {
+        if (strpos($request->getHeader('Content-Type')[0], 'multipart/form-data') === 0) {
             $request = $this->parseUploadedFiles($request);
         }
         return $handler->handle($request);
