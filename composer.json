@@ -6,7 +6,7 @@
         "bin-dir": "bin"
     },
     "require": {
-        "neos/flow": "^7.0",
+        "neos/flow": "^7.0 || ^8.0 ",
         "t3n/graphql": "^3.0",
         "php": "^7.3",
         "ext-json": "*"
